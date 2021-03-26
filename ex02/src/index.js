@@ -29,11 +29,14 @@ var iterator = myGenerator();
 var fifteenArray = [];
 
 for (let i = 1; i <= 16; i++) {
-  let el = "#" + iterator.next().value;
+  let el = iterator.next().value + "#";
   fifteenArray.push(el);
 }
 
-console.log(fifteenArray);
+fifteenArray.pop();
+fifteenArray.push("!undefined");
+
+console.log(fifteenArray.join(", "));
 
 // Only change code above this line
 
