@@ -10,14 +10,16 @@ let shoppingList = new Map([
 const arrKey = [];
 const arrValue = [];
 for (let key of shoppingList.keys()) {
-  console.log(`groceries: \t ${key}`);
   arrKey.push(key);
 }
 
+arrKey.forEach((key) => console.log("groceries:", key));
+
 for (let value of shoppingList.values()) {
-  console.log(`amount: \t ${value}`);
   arrValue.push(value);
 }
+
+arrValue.forEach((value) => console.log("amount:", value));
 
 for (let entry of shoppingList.entries()) {
   console.log(entry);
